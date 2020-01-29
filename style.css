@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.main-header{
+    background: rgb(122, 50, 50);
+}
+.main-header .container{
+    display: flex;
+    width: 1200px;
+    padding: 30px;
+    margin:auto ;
+    align-items: center;
+}
+.container .logo{
+    width: 100px;
+}
+.container .logo img{
+    width: 100%;
+    vertical-align: middle;/*圖片本身有問題所以需加vertical-align*/
+}
+.main-header .main-nav{
+    display: flex;/*往上移動5px*/
+    margin: auto; /*將剩餘空間分配給main-nav*/
+}
+.main-header .main-nav a{
+    padding: 5px 1em;
+    text-decoration: none;
+    color:#fff;
+    position: relative;
+    transform: translateY(0px);
+    transition: .3s;
+}
+.main-header .main-nav a:hover{
+    transform: translateY(-5px);
+}
+.main-header .main-nav a:after{
+    content:'';
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: -5px;
+    height: 0;
+    border-bottom:1px solid  #000; 
+    transition: .3s;
+}
+.main-header .main-nav a:hover:after{
+    left: 0;
+    right: 0;
+}
+
+.main-header .header-search{
+    display: flex;
+}
+.main-header .header-search input:focus,
+.main-header .header-search button:focus{
+    outline: none;
+}
+
+.main-header .header-search input,
+.main-header .header-search button{
+    border:none;
+    padding: 5px 10px;
+    background: #fff;
+}
+
+.main-header .header-search input{
+    border-radius: 200px 0 0 200px;
+}
+.main-header .header-search button{
+    border-radius: 0 200px 200px 0;
+}
