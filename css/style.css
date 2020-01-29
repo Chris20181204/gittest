@@ -4,7 +4,7 @@ body{
     list-style: none;
 }
 .main-header{
-    background: #ccc;
+    background: #000;
 }
 .main-header .container{
     display: flex;
